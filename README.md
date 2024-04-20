@@ -87,12 +87,13 @@ Crew AI enhances our data extraction capabilities by automatically pulling struc
 
 Set environment variables for API keys:
 
-bash
--export CO_API_KEY="Your_Cohere_API_Key"
--export WCS_API_KEY="Your_Weaviate_API_Key"
--export OPENAI_API_KEY="Your_OpenAI_API_Key"
+```bash
+export CO_API_KEY="Your_Cohere_API_Key"
+export WCS_API_KEY="Your_Weaviate_API_Key"
+export OPENAI_API_KEY="Your_OpenAI_API_Key"
+```
 
-#Running the Application
+Running the Application
 Launch the application with Streamlit:
 
 ```bash
