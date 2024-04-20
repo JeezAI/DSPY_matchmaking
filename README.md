@@ -4,6 +4,9 @@
 
 JeezAI Internship Finder is an AI-powered web application that connects students with the most compatible internship opportunities. It leverages advanced natural language processing techniques and the power of DSPy framework by Stanford NLP (Omar Khattab, Herumb Shandilya, Arnav Singhvi) to analyze resumes, generate search queries, and provide detailed match analyses between students' credentials and internship requirements.
 
+![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/abf480a3-8703-431f-9672-937c3742c650)
+
+
 ## Key Features
 
 - **Resume Parsing:** Automated extraction of pertinent information from resumes.
@@ -19,6 +22,8 @@ The Internship Finder is built with a stack that includes DSPy for structured AI
 ### Core Technologies
 
 - **DSPy:** A framework for declarative structured programming in AI. It enables the modularization of NLP tasks into reusable components, enhancing both development efficiency and system scalability. DSPy allows defining declarative language model calls that get compiled into self-improving pipelines. This shifts the focus from manual prompt engineering to treating LMs as devices. It introduces concepts like natural language type signatures, modules, and optimizers to specify transformations, encapsulate prompting techniques, and update LM weights to achieve target metrics. DSPy can be used to build complex pipelines, like multi-hop question answering systems that break down questions, retrieve relevant passages, and synthesize answers. The DSPy compiler enables systematic optimization of prompts by running inputs through the pipeline, analyzing traces, and treating prompt engineering as a discrete AI optimization problem.This declarative approach leads to significant quality improvements over few-shot prompting and can match the performance of powerful models like GPT-3.5 through optimized prompts.
+ ![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/59ebbbdb-d382-4422-a530-361b112b8eb5)
+
 
 Some exciting applications mentioned include:
 - Generating structured outputs with type predictors, JSON templates, and retry logic
