@@ -38,7 +38,38 @@ Overall, DSPy provides an impressive framework for building reliable, optimized 
 We also use;
 - **Cohere:** Utilized for its newest and most powerful model, Commard R+ in generating search queries and performing deep linguistic analyses. [https://docs.cohere.com/docs/command-r-plus]
 - **Weaviate:** Chosen for its vector search capabilities, allowing quick retrieval of internship opportunities from large datasets.We used Weaviate Hybrid search to combine multiple search algorithms to improve the accuracy and relevance of search results. This hybrid query involves both keyword matching and semantic vector search to return the most relevant internship opportunities from the database. [https://weaviate.io/]
-- **Streamlit:** Facilitates rapid development of interactive web apps, used here to craft the user interface. 
+- **Streamlit:** Facilitates rapid development of interactive web apps, used here to craft the user interface.
+
+### DSPy Integration in Internship Finder
+
+DSPy (Declarative Structured Programming for AI) is instrumental in building the core functionality of the Internship Finder application. As a framework, DSPy facilitates the creation of modular and reusable components for natural language processing tasks. The implementation in our application is outlined as follows:
+
+### Initialization and Configuration
+- DSPy modules `dspy` and `dsp`, along with `WeaviateRM` (Weaviate Retrieval Model), are imported for foundational setup.
+- The connection to the Weaviate database is established using configurations like cluster URL, API key, and timeouts.
+- DSPy settings are configured to integrate the language model (Cohere) and the retrieval model (WeaviateRM) for smooth operations.
+
+### Defining the Internship Finder Module
+- A custom DSPy module, `Internship_finder`, derived from `dspy.Module`, encapsulates the logic for internship matching.
+- Within this module:
+  - `generate_query`: Employs `dspy.ChainOfThought` to instantiate the signature for dynamic query generation.
+  - `generate_analysis`: Utilizes `dspy.Predict` for conducting a thorough match analysis.
+
+### Defining Signatures
+- Two DSPy signatures are crafted:
+  - `generate_analysis`: Accepts internship context and resume to output structured matches in JSON format.
+  - `generate_query`: Analyzes resumes to produce a targeted search query for the Weaviate database.
+
+### Internship Matching Process
+- The module's `forward` method orchestrates the matching process:
+  - Executes query generation through the `generate_query` signature, iterating as needed.
+  - Performs a database search for each query, collating results into a list of passages.
+  - Deduplicates the list to remove any repeated internship listings.
+  - Carries out a detailed match analysis using the `generate_analysis` signature.
+  - The output is a comprehensive analysis detailing the matched internships.
+
+By adopting DSPy, the Internship Finder application benefits from a structured, maintainable, and extensible framework. It demonstrates the efficient utilization of modules and signatures, streamlining the integration with various models and databases.
+
 
 ### 📚Directory Structure
 
