@@ -40,7 +40,16 @@ We also use;
 - **Weaviate:** Chosen for its vector search capabilities, allowing quick retrieval of internship opportunities from large datasets.We used Weaviate Hybrid search to combine multiple search algorithms to improve the accuracy and relevance of search results. This hybrid query involves both keyword matching and semantic vector search to return the most relevant internship opportunities from the database. [https://weaviate.io/]
 - **Streamlit:** Facilitates rapid development of interactive web apps, used here to craft the user interface.
 
-### DSPy Integration in Internship Finder
+
+### 📚Directory Structure
+
+- `main.py` - Orchestrates the user interaction and integrates various modules.
+- `tools.py` - Contains utility functions and custom methods for data processing.
+- `resume_temp.json` - Template for standardizing resume data format.
+
+## 🤖DSPy Integration
+
+The Internship Finder leverages the power of DSPy to create reusable and modular components for various AI tasks. 
 
 DSPy (Declarative Structured Programming for AI) is instrumental in building the core functionality of the Internship Finder application. As a framework, DSPy facilitates the creation of modular and reusable components for natural language processing tasks. The implementation in our application is outlined as follows:
 
@@ -69,38 +78,8 @@ DSPy (Declarative Structured Programming for AI) is instrumental in building the
   - The output is a comprehensive analysis detailing the matched internships.
 
 By adopting DSPy, the Internship Finder application benefits from a structured, maintainable, and extensible framework. It demonstrates the efficient utilization of modules and signatures, streamlining the integration with various models and databases.
-
-
-### 📚Directory Structure
-
-- `main.py` - Orchestrates the user interaction and integrates various modules.
-- `tools.py` - Contains utility functions and custom methods for data processing.
-- `resume_temp.json` - Template for standardizing resume data format.
-
-## 🤖DSPy Integration
-
-The Internship Finder leverages the power of DSPy to create reusable and modular components for various AI tasks. 
-
-### Modules and Agents
-
-1. **`Internship_finder` (Module):
-   - Inherits from `dspy.Module` and encapsulates the core logic for finding relevant internships based on a student's resume.
-   - Utilizes a Chain of Thought approach with multiple instances of the `generate_query` signature to generate search queries iteratively.
-   - Employs the `generate_analysis` signature to perform a detailed match analysis between the student's background and internship requirements.
-
-2. `generate_query` (Signature):
-   - Defines the structure and behavior of the query generation process.
-   - Analyzes the resume, extracts keywords from skills, education, experience, and projects.
-   - Generates keyword-based queries to search for the best internships in the Weaviate database.
-
-3. `generate_analysis` (Signature):
-   - Defines the structure and behavior of the match analysis process.
-   - Takes the student's resume and a list of potential internship opportunities as input.
-   - Performs a detailed match analysis based on educational background, skill and experience match, and project relevance.
-   - Provides a summary of the match analysis for each internship in a structured JSON format.
     
-
-## 📊Data Extraction with Crew AI
+## 📊Data Extraction with Crew AI LLM Agents
 
 Crew AI enhances our data extraction capabilities by automatically pulling structured insights from unstructured internship descriptions. This enriched data supports improved matching accuracy and created JSON file for each database records.
 
