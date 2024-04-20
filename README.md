@@ -22,6 +22,7 @@ The Internship Finder is built with a stack that includes DSPy for structured AI
 ### Core Technologies
 
 - **DSPy:** A framework for declarative structured programming in AI. It enables the modularization of NLP tasks into reusable components, enhancing both development efficiency and system scalability. DSPy allows defining declarative language model calls that get compiled into self-improving pipelines. This shifts the focus from manual prompt engineering to treating LMs as devices. It introduces concepts like natural language type signatures, modules, and optimizers to specify transformations, encapsulate prompting techniques, and update LM weights to achieve target metrics. DSPy can be used to build complex pipelines, like multi-hop question answering systems that break down questions, retrieve relevant passages, and synthesize answers. The DSPy compiler enables systematic optimization of prompts by running inputs through the pipeline, analyzing traces, and treating prompt engineering as a discrete AI optimization problem.
+  
  ![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/59ebbbdb-d382-4422-a530-361b112b8eb5)
 
 
