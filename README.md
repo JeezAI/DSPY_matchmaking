@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-JeezAI Internship Finder is an AI-powered web application that connects students with the most compatible internship opportunities. It leverages advanced natural language processing techniques and the power of DSPy (Declarative Structured Programming for AI) to analyze resumes, generate search queries, and provide detailed match analyses between students' credentials and internship requirements.
+JeezAI Internship Finder is an AI-powered web application that connects students with the most compatible internship opportunities. It leverages advanced natural language processing techniques and the power of DSPy framework by Stanford NLP (Omar Khattab, Herumb Shandilya, Arnav Singhvi) to analyze resumes, generate search queries, and provide detailed match analyses between students' credentials and internship requirements.
 
 ## Key Features
 
@@ -43,21 +43,26 @@ We also use;
 
 ## DSPy Integration
 
-Internship Finder leverages DSPy's structured programming capabilities to create well-defined, isolated modules that perform specific AI tasks. This section details the key DSPy components:
+The Internship Finder leverages the power of DSPy to create reusable and modular components for various AI tasks. 
 
 ### Modules and Agents
 
-- **Internship_finder Module:** Core module handling the logic for querying internships.
-  - Inherits from `dspy.Module`.
-  - Uses `generate_query` and `generate_analysis` signatures to iterate through query generation and match analysis.
-  
-- **generate_query Signature:**
-  - Responsible for parsing the resume data to extract skills, experiences, and education.
-  - Generates targeted search queries for internships using extracted keywords.
-  
-- **generate_analysis Signature:**
-  - Takes resume data and potential internship matches as inputs.
-  - Conducts thorough compatibility analyses, outputting a structured match analysis in JSON format.
+1. **`Internship_finder` (Module):
+   - Inherits from `dspy.Module` and encapsulates the core logic for finding relevant internships based on a student's resume.
+   - Utilizes a Chain of Thought approach with multiple instances of the `generate_query` signature to generate search queries iteratively.
+   - Employs the `generate_analysis` signature to perform a detailed match analysis between the student's background and internship requirements.
+
+2. `generate_query` (Signature):
+   - Defines the structure and behavior of the query generation process.
+   - Analyzes the resume, extracts keywords from skills, education, experience, and projects.
+   - Generates keyword-based queries to search for the best internships in the Weaviate database.
+
+3. `generate_analysis` (Signature):
+   - Defines the structure and behavior of the match analysis process.
+   - Takes the student's resume and a list of potential internship opportunities as input.
+   - Performs a detailed match analysis based on educational background, skill and experience match, and project relevance.
+   - Provides a summary of the match analysis for each internship in a structured JSON format.
+    
 
 ## Data Extraction with Crew AI
 
@@ -89,6 +94,7 @@ Visit http://localhost:8501 in your web browser to interact with the application
 - Personalized Recommendations: Adapt search results based on individual career aspirations and feedback.
 - Interactive User Feedback: Use collaborative filtering to refine matching algorithms based on user interactions.
 - Real-time Notifications: Implement a system to notify users of new opportunities.
+- Integrate with LinkedIn Analyzer and Career Roadmap Planner [https://github.com/JeezAI/careerbuilder_Linkedin2CareerRoadmap]
 
 ### Conclusion
 The Internship Finder exemplifies the powerful combination of DSPy for structured AI development and Cohere for sophisticated text analysis, providing a robust solution for internship matching. This platform not only streamlines the search process but also offers a scalable framework for future enhancements.
