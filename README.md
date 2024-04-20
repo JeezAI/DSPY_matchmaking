@@ -4,7 +4,7 @@
 
 JeezAI Internship Finder is an AI-powered web application that connects students with the most compatible internship opportunities. It leverages advanced natural language processing techniques and the power of DSPy framework by Stanford NLP (Omar Khattab, Herumb Shandilya, Arnav Singhvi) to analyze resumes, generate search queries, and provide detailed match analyses between students' credentials and internship requirements.
 
-![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/abf480a3-8703-431f-9672-937c3742c650)
+![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/50934dc0-0b03-4fc2-946d-21794d1a489a)
 
 
 ## Key Features
