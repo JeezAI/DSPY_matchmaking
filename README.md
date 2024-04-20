@@ -1,13 +1,13 @@
 # 🔍Internship Finder
 
-## 📝Project Overview
+## 📝 Project Overview
 
 JeezAI Internship Finder is an AI-powered web application that connects students with the most compatible internship opportunities. It leverages advanced natural language processing techniques and the power of DSPy framework by Stanford NLP (Omar Khattab, Herumb Shandilya, Arnav Singhvi) to analyze resumes, generate search queries, and provide detailed match analyses between students' credentials and internship requirements.
 
 ![image](https://github.com/JeezAI/DSPy_matchmaking/assets/114735073/50934dc0-0b03-4fc2-946d-21794d1a489a)
 
 
-## 🔑Key Features
+## 🔑 Key Features
 
 - **Resume Parsing:** Automated extraction of pertinent information from resumes.
 - **Keyword-Based Search Queries:** Generates dynamic queries to find the best internships.
@@ -15,7 +15,7 @@ JeezAI Internship Finder is an AI-powered web application that connects students
 - **Scalable Data Storage:** Uses Weaviate, a vector database for efficient data storage and retrieval.
 - **Streamlit Web Interface:** Provides an easy-to-navigate interface for users to upload resumes and explore internship opportunities.
 
-## 🖥️Technical Architecture
+## 🖥️ Technical Architecture
 
 The Internship Finder is built with a stack that includes DSPy for structured AI programming, Cohere for text processing, and Streamlit for the front-end, encapsulated within a modular architectural framework.
 
@@ -42,13 +42,13 @@ We also use;
 - **Streamlit:** Facilitates rapid development of interactive web apps, used here to craft the user interface.
 
 
-### 📚Directory Structure
+### 📚 Directory Structure
 
 - `main.py` - Orchestrates the user interaction and integrates various modules.
 - `tools.py` - Contains utility functions and custom methods for data processing.
 - `resume_temp.json` - Template for standardizing resume data format.
-
-## 🤖DSPy Integration
+ 
+## 🤖 DSPy Integration
 
 The Internship Finder leverages the power of DSPy to create reusable and modular components for various AI tasks. 
 
@@ -84,7 +84,7 @@ By adopting DSPy, the Internship Finder application benefits from a structured, 
 
 Crew AI enhances our data extraction capabilities by automatically pulling structured insights from unstructured internship descriptions. This enriched data supports improved matching accuracy and created JSON file for each database records.
 
-## 🚀Getting Started
+## 🚀 Getting Started
 
 ### Installation
 
