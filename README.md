@@ -85,10 +85,10 @@ Visit http://localhost:8501 in your web browser to interact with the application
 
 
 ### Future Enhancements
-# Data Source Expansion: Link to more databases for a broader internship selection.
-# Personalized Recommendations: Adapt search results based on individual career aspirations and feedback.
-# Interactive User Feedback: Use collaborative filtering to refine matching algorithms based on user interactions.
-# Real-time Notifications: Implement a system to notify users of new opportunities.
+- Data Source Expansion: Link to more databases for a broader internship selection.
+- Personalized Recommendations: Adapt search results based on individual career aspirations and feedback.
+- Interactive User Feedback: Use collaborative filtering to refine matching algorithms based on user interactions.
+- Real-time Notifications: Implement a system to notify users of new opportunities.
 
 ### Conclusion
 The Internship Finder exemplifies the powerful combination of DSPy for structured AI development and Cohere for sophisticated text analysis, providing a robust solution for internship matching. This platform not only streamlines the search process but also offers a scalable framework for future enhancements.
