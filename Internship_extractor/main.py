@@ -15,7 +15,7 @@ agents = Agents()
 csv_file = 'internships.csv'
 df = pd.read_csv(csv_file)
 
-final_output_file = 'final_internships.json'  # Specify the final output JSON file
+final_output_file = 'internships_dataset.json'  # Specify the final output JSON file
 
 # Create or open the final output file in append mode
 with open(final_output_file, 'a') as final_output:
